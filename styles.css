@@ -104,7 +104,7 @@ body {
     will-change: transform;
 }
 
-/* Navigation */result-number
+/* Navigation */
 .navbar {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-soft) 100%);
     color: white;
@@ -2108,6 +2108,7 @@ body {
 .tech-badge {
     display: inline-flex;
     align-items: center;
+    margin-top: 50px;
     gap: 8px;
     background: linear-gradient(135deg, rgba(74, 124, 74, 0.2) 0%, rgba(45, 74, 45, 0.3) 100%);
     border: 1px solid rgba(107, 154, 107, 0.4);
@@ -2119,7 +2120,6 @@ body {
     letter-spacing: 1px;
     color: var(--color-primary-light);
     backdrop-filter: blur(5px);
-    margin-bottom: 20px;
 }
 
 /* Centrage du hero content */
