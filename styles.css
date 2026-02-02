@@ -104,12 +104,13 @@ body {
     will-change: transform;
 }
 
-/* Navigation */
+/* Navigation */result-number
 .navbar {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-soft) 100%);
     color: white;
     padding: 1rem 0;
-    position: sticky;
+    position: fixed;
+    width:100%;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 15px rgba(26, 46, 26, 0.2);
@@ -1486,12 +1487,14 @@ body {
 
 /* Tool Showcase - Cognibox */
 .tool-showcase {
+    display: flex;
     margin-top: 60px;
     padding-top: 50px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .tool-showcase-content {
+    display: inline-block;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
