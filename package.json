@@ -1,0 +1,24 @@
+{
+  "name": "demoares",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+  "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dg79-glitch/DemoARES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dg79-glitch/DemoARES/issues"
+  },
+  "homepage": "https://github.com/dg79-glitch/DemoARES#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

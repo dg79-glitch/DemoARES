@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Formation - OIZO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="cognibox.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <div id="hero-placeholder"></div>
+
+    <!-- Section 1: Ce que nous faisons -->
+    <div id="content-sections-placeholder"></div>
+
+    <!-- Section 2: Fonctionnalités en images -->
+    <div id="features-placeholder"></div>
+
+    <!-- Section 3: Pourquoi Cognibox -->
+    <div id="benefits-placeholder"></div>
+
+    <!-- Call to Action -->
+    <div id="cta-placeholder"></div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script pour charger les composants -->
+    <script>
+        // Fonction pour charger un composant HTML
+        async function loadComponent(file, placeholderId) {
+            try {
+                const response = await fetch(file);
+                const html = await response.text();
+                document.getElementById(placeholderId).innerHTML = html;
+            } catch (error) {
+                console.error(`Erreur lors du chargement de ${file}:`, error);
+            }
+        }
+
+        // Charger tous les composants au chargement de la page
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadComponent('navigation.html', 'nav-placeholder');
+            await loadComponent('en-tete.html', 'hero-placeholder');
+            await loadComponent('sections-contenu.html', 'content-sections-placeholder');
+            await loadComponent('fonctionnalites.html', 'features-placeholder');
+            await loadComponent('avantages.html', 'benefits-placeholder');
+            await loadComponent('appel-action.html', 'cta-placeholder');
+            await loadComponent('../components/pied-de-page.html', 'footer-placeholder');
+        });
+    </script>
+</body>
+</html>

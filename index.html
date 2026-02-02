@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OIZO - Le progrès peut être tranquille</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Rideau Jungle - Animation d'entrée -->
+    <div class="jungle-curtain" id="jungleCurtain">
+        <div class="curtain-top"></div>
+        <div class="curtain-bottom"></div>
+        <div class="curtain-logo">
+            <img src="image/image.png" alt="OIZO" onerror="this.outerHTML='<span>OIZO</span>'">
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Lianes et fougères décoratives -->
+    <div class="vine-decoration vine-left">
+        <svg viewBox="0 0 150 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0 Q40 100 25 200 Q10 300 30 400 Q50 500 20 600 Q0 700 35 800" stroke="#3d5e3d" stroke-width="4" fill="none" opacity="0.6"/>
+            <path d="M25 80 Q45 70 55 90 Q45 100 25 80" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M20 150 Q0 140 -10 160 Q0 170 20 150" fill="#5a8a5a" opacity="0.6"/>
+            <path d="M30 220 Q50 210 60 230 Q50 240 30 220" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M15 320 Q-5 310 -15 330 Q-5 340 15 320" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M35 400 Q55 390 65 410 Q55 420 35 400" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M25 480 Q5 470 -5 490 Q5 500 25 480" fill="#5a8a5a" opacity="0.6"/>
+            <path d="M20 560 Q40 550 50 570 Q40 580 20 560" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M30 650 Q10 640 0 660 Q10 670 30 650" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M25 720 Q45 710 55 730 Q45 740 25 720" fill="#4a7c4a" opacity="0.7"/>
+        </svg>
+    </div>
+
+    <div class="vine-decoration vine-right">
+        <svg viewBox="0 0 150 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M130 0 Q110 100 125 200 Q140 300 120 400 Q100 500 130 600 Q150 700 115 800" stroke="#3d5e3d" stroke-width="4" fill="none" opacity="0.6"/>
+            <path d="M125 80 Q105 70 95 90 Q105 100 125 80" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M130 150 Q150 140 160 160 Q150 170 130 150" fill="#5a8a5a" opacity="0.6"/>
+            <path d="M120 220 Q100 210 90 230 Q100 240 120 220" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M135 320 Q155 310 165 330 Q155 340 135 320" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M115 400 Q95 390 85 410 Q95 420 115 400" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M125 480 Q145 470 155 490 Q145 500 125 480" fill="#5a8a5a" opacity="0.6"/>
+            <path d="M130 560 Q110 550 100 570 Q110 580 130 560" fill="#4a7c4a" opacity="0.7"/>
+            <path d="M120 650 Q140 640 150 660 Q140 670 120 650" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M125 720 Q105 710 95 730 Q105 740 125 720" fill="#4a7c4a" opacity="0.7"/>
+        </svg>
+    </div>
+
+    <!-- Fougères en haut -->
+    <div class="fern-decoration fern-top-left">
+        <svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0 Q80 60 150 150 Q180 200 200 250" stroke="#2d4a2d" stroke-width="3" fill="none" opacity="0.7"/>
+            <path d="M40 30 Q20 50 30 70 Q50 55 40 30" fill="#4a7c4a" opacity="0.6"/>
+            <path d="M60 50 Q35 75 50 100 Q75 80 60 50" fill="#5a8a5a" opacity="0.7"/>
+            <path d="M85 75 Q55 105 75 135 Q105 110 85 75" fill="#4a7c4a" opacity="0.6"/>
+            <path d="M110 100 Q75 135 100 170 Q135 140 110 100" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M135 130 Q95 170 125 210 Q165 175 135 130" fill="#4a7c4a" opacity="0.6"/>
+        </svg>
+    </div>
+
+    <div class="fern-decoration fern-top-right">
+        <svg viewBox="0 0 300 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M300 0 Q220 60 150 150 Q120 200 100 250" stroke="#2d4a2d" stroke-width="3" fill="none" opacity="0.7"/>
+            <path d="M260 30 Q280 50 270 70 Q250 55 260 30" fill="#4a7c4a" opacity="0.6"/>
+            <path d="M240 50 Q265 75 250 100 Q225 80 240 50" fill="#5a8a5a" opacity="0.7"/>
+            <path d="M215 75 Q245 105 225 135 Q195 110 215 75" fill="#4a7c4a" opacity="0.6"/>
+            <path d="M190 100 Q225 135 200 170 Q165 140 190 100" fill="#6b9a6b" opacity="0.5"/>
+            <path d="M165 130 Q205 170 175 210 Q135 175 165 130" fill="#4a7c4a" opacity="0.6"/>
+        </svg>
+    </div>
+
+    <!-- Section Hero / Accueil -->
+    <section class="hero">
+        <div class="tech-grid-overlay"></div>
+        <div class="tech-dots"></div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <span class="tech-badge">Modernisation TI sereine</span>
+                <div class="hero-logo">
+                    <img src="image/image.png" alt="OIZO Logo" class="logo-img" onerror="this.style.display='none'; document.querySelector('.hero-title-fallback').style.display='block';">
+                    <h1 class="hero-title-fallback" style="display:none;">OIZO</h1>
+                </div>
+                <p class="hero-subtitle">Des décisions solides, sans bruit.</p>
+                <p class="hero-tagline">Le progrès peut être tranquille.</p>
+                <div class="hero-buttons">
+                    <a href="#constat" class="btn-primary tech-glow">Découvrir notre approche</a>
+                    <a href="#contact" class="btn-secondary">Discuter avec nous</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Le Constat -->
+    <section id="constat" class="section-constat">
+        <div class="hex-pattern"></div>
+        <div class="container">
+            <span class="section-number">01</span>
+            <h2>Le constat</h2>
+            <p class="section-subtitle">Ouvrons la discussion</p>
+
+            <div class="constat-content">
+                <div class="constat-problem">
+                    <h3>Une pression technologique constante</h3>
+                    <p>Aujourd'hui, les entreprises sont constamment exposées à :</p>
+                    <ul class="problem-list">
+                        <li><span class="list-icon"></span>Nouvelles plateformes</li>
+                        <li><span class="list-icon"></span>Nouvelles méthodes</li>
+                        <li><span class="list-icon"></span>Nouvelles promesses</li>
+                        <li><span class="list-icon"></span>Nouvelles urgences</li>
+                    </ul>
+                </div>
+
+                <div class="constat-issue">
+                    <h3>La modernisation TI est trop souvent associée à :</h3>
+                    <div class="issue-cards">
+                        <div class="issue-card">
+                            <span class="issue-icon">~</span>
+                            <span>Des ruptures</span>
+                        </div>
+                        <div class="issue-card">
+                            <span class="issue-icon">!</span>
+                            <span>De l'instabilité</span>
+                        </div>
+                        <div class="issue-card">
+                            <span class="issue-icon">?</span>
+                            <span>Une perte de repères</span>
+                        </div>
+                        <div class="issue-card">
+                            <span class="issue-icon">*</span>
+                            <span>Une fatigue organisationnelle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="constat-conclusion">
+                <p class="highlight-text">Pourtant, moderniser ne devrait pas être stressant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Notre Positionnement -->
+    <section id="positionnement" class="section-positionnement">
+        <div class="container">
+            <span class="section-number">02</span>
+            <h2>Notre positionnement</h2>
+            <p class="section-subtitle">Se distinguer</p>
+
+            <div class="positionnement-content">
+                <div class="principle-box">
+                    <p class="principle-intro">Chez Oizo, nous partons d'un principe simple :</p>
+                    <p class="principle-main">Le progrès peut être tranquille.</p>
+                </div>
+
+                <div class="beliefs">
+                    <h3>Nous croyons que :</h3>
+                    <div class="belief-items">
+                        <div class="belief-item">
+                            <div class="belief-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
+                                </svg>
+                            </div>
+                            <p>La technologie n'a pas besoin de faire du bruit pour être utile</p>
+                        </div>
+                        <div class="belief-item">
+                            <div class="belief-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <p>La donnée n'a pas besoin d'être spectaculaire pour être décisive</p>
+                        </div>
+                        <div class="belief-item">
+                            <div class="belief-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                </svg>
+                            </div>
+                            <p>Ce qui fonctionne mérite d'être respecté</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="positionnement-conclusion">
+                <p class="highlight-text">Nous nous opposons à la hype TI, non pas par résistance au progrès, mais par respect de la stabilité.</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Section 4: La Philosophie Oizo -->
+    <section id="philosophie" class="section-philosophie">
+        <div class="hex-pattern"></div>
+        <div class="container">
+            <span class="section-number">04</span>
+            <h2>La philosophie Oizo</h2>
+
+            <div class="philosophie-hero">
+                <p class="philosophie-main">On préfère ce qui tient à ce qui brille.</p>
+            </div>
+
+            <div class="philosophie-values">
+                <h3>Nous privilégions :</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-compare">
+                            <span class="value-prefer">La durabilité</span>
+                            <span class="value-vs">plutôt que</span>
+                            <span class="value-reject">l'effet wow</span>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-compare">
+                            <span class="value-prefer">La clarté</span>
+                            <span class="value-vs">plutôt que</span>
+                            <span class="value-reject">la complexité</span>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-compare">
+                            <span class="value-prefer">L'adoption réelle</span>
+                            <span class="value-vs">plutôt que</span>
+                            <span class="value-reject">la nouveauté forcée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophie-result">
+                <h3>Un bon système décisionnel :</h3>
+                <div class="result-items">
+                    <div class="result-item">
+                        <span class="result-number">1</span>
+                        <span>S'intègre</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">2</span>
+                        <span>Se fait oublier</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-number">3</span>
+                        <span>Soutient les équipes au quotidien</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Ce que fait Oizo -->
+    <section id="services" class="section-services">
+        <div class="container">
+            <span class="section-number">05</span>
+            <h2>Ce que fait Oizo</h2>
+            <p class="section-subtitle">Sans jargon</p>
+
+            <div class="services-intro">
+                <p>Oizo accompagne les organisations pour :</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h4>Mieux exploiter ce qu'elles ont déjà</h4>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="8" y1="6" x2="21" y2="6"/>
+                            <line x1="8" y1="12" x2="21" y2="12"/>
+                            <line x1="8" y1="18" x2="21" y2="18"/>
+                            <line x1="3" y1="6" x2="3.01" y2="6"/>
+                            <line x1="3" y1="12" x2="3.01" y2="12"/>
+                            <line x1="3" y1="18" x2="3.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h4>Structurer et clarifier leurs données</h4>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h4>Soutenir la prise de décision</h4>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>Renforcer la stabilité plutôt que provoquer le changement</h4>
+                </div>
+            </div>
+
+            <div class="services-approach">
+                <h3>Toujours :</h3>
+                <div class="approach-items">
+                    <div class="approach-item">
+                        <span class="approach-icon">></span>
+                        <span>À partir de l'existant</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-icon">></span>
+                        <span>À un rythme maîtrisé</span>
+                    </div>
+                    <div class="approach-item">
+                        <span class="approach-icon">></span>
+                        <span>Avec une attention particulière au confort des équipes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Suivi de Formation - Exemple concret -->
+            <div class="tool-showcase">
+                <div class="tool-showcase-content">
+                    <span class="tool-badge">En action</span>
+                    <h3>Gestion de Formation</h3>
+                    <p>Un exemple concret de notre approche : un outil simple pour suivre les formations de vos équipes.</p>
+                    <a href="cognibox/index.html" class="tool-link">
+                        <span>Voir l'outil</span>
+                        <span class="tool-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Ce que Oizo ne fait pas -->
+    <section id="limites" class="section-limites">
+        <div class="container">
+            <span class="section-number">06</span>
+            <h2>Ce que Oizo ne fait pas</h2>
+            <p class="section-subtitle">Important</p>
+
+            <div class="limites-intro">
+                <p>Oizo ne cherche pas à :</p>
+            </div>
+
+            <div class="limites-grid">
+                <div class="limite-card">
+                    <span class="limite-icon">X</span>
+                    <p>Remplacer pour remplacer</p>
+                </div>
+                <div class="limite-card">
+                    <span class="limite-icon">X</span>
+                    <p>Imposer des outils à la mode</p>
+                </div>
+                <div class="limite-card">
+                    <span class="limite-icon">X</span>
+                    <p>Créer une dépendance technologique</p>
+                </div>
+                <div class="limite-card">
+                    <span class="limite-icon">X</span>
+                    <p>Accélérer sans raison</p>
+                </div>
+            </div>
+
+            <div class="limites-conclusion">
+                <p class="highlight-text">Si ça brille mais que ça ne tient pas, ce n'est pas Oizo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Pourquoi ça fonctionne -->
+    <section id="resultats" class="section-resultats">
+        <div class="hex-pattern"></div>
+        <div class="container">
+            <span class="section-number">07</span>
+            <h2>Pourquoi ça fonctionne</h2>
+            <p class="section-subtitle">Factuellement</p>
+
+            <div class="resultats-content">
+                <div class="resultats-benefits">
+                    <h3>Cette approche :</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon-large">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+                                </svg>
+                            </div>
+                            <p>Réduit la résistance au changement</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon-large">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <p>Favorise l'adoption réelle</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon-large">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <p>Sécurise les opérations</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="benefit-icon-large">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="12" y1="20" x2="12" y2="10"/>
+                                    <line x1="18" y1="20" x2="18" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="16"/>
+                                </svg>
+                            </div>
+                            <p>Améliore la qualité décisionnelle sur le long terme</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultats-audience">
+                    <h3>Particulièrement adapté :</h3>
+                    <div class="audience-tags">
+                        <span class="audience-tag">PME</span>
+                        <span class="audience-tag">Environnements industriels</span>
+                        <span class="audience-tag">Organisations qui valorisent la stabilité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: OIZO en une phrase -->
+    <section id="resume" class="section-resume">
+        <div class="container">
+            <span class="section-number">08</span>
+            <h2>OIZO, en une phrase</h2>
+
+            <div class="resume-content">
+                <blockquote class="resume-quote">
+                    Oizo aide les organisations à prendre de meilleures décisions,<br>
+                    <strong>sans perturber ce qui fonctionne déjà.</strong>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Message de clôture -->
+    <section id="cloture" class="section-cloture">
+        <div class="container">
+            <div class="cloture-content">
+                <p class="cloture-text">Le progrès n'est pas toujours une question de vitesse.</p>
+                <p class="cloture-text">Parfois, c'est une question d'assise.</p>
+
+                <div class="cloture-logo">
+                    <img src="image/image.png" alt="OIZO" onerror="this.outerHTML='<span class=cloture-brand>Oizo.</span>'">
+                </div>
+                <p class="cloture-tagline">Le progrès peut être tranquille.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Parlons-en</h2>
+            <p class="section-subtitle">Discutons de votre organisation</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Dominique</h3>
+                    <p>dominique@oizo.tech</p>
+                    <p>(581) 306-3847</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Alexandre</h3>
+                    <p>alexandre@oizo.tech</p>
+                    <p>(418) 557-2450</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
